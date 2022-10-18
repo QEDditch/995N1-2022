@@ -21,7 +21,7 @@ Using read_html we are going to load the first page of the firm data
 using html_nodes with are going all the containers where each of the firms are located which are contained into 'article'
 This will collect all articles where the firm data is contained in. 
 ```{r}
-SIC_item <- read_html("https://web.archive.org/web/20220129090958/https:/www.sinc.co.uk/member-directory-list") %>%
+SIC_item <- read_html("https://web.archive.org/web/20220129090958/https:/www.sinc.co.uk/member-directory-list") %>% #updated with new URL
   html_nodes("article")
 ```
 
@@ -101,7 +101,7 @@ For next time, using all the code above, try to create a for loop over the diffe
 (v) view the dataframe created
 ```{r}
 for (i in 1:14){
-  URL <- paste0("https://www.sinc.co.uk/member-directory-list?page=", i)
+  URL <- paste0("https://web.archive.org/web/20220129090958/https:/www.sinc.co.uk/member-directory-list?page=", i)
   
   SIC_item <- read_html(URL) %>%
     html_nodes("article")
