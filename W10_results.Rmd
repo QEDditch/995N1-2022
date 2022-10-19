@@ -13,9 +13,9 @@ In this notebook, we are going to look into classifying documents into diagnosti
 rm(list=ls())
 library(tidyverse)
 
-setwd("/Users/fl49/Desktop")
+#setwd("/Users/*username here*/Desktop") it may be necessary to formally set a working directory here but in most cases
 Medline <- readRDS("Diag_full.rds")
-Medline <- as.tibble(Medline)
+Medline <- as_tibble(Medline)
 summary(Medline)
 glimpse(Medline)
 ```
