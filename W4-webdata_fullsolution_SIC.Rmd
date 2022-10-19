@@ -102,9 +102,13 @@ For next time, using all the code above, try to create a for loop over the diffe
 ```{r}
 for (i in 1:14){
   URL <- paste0("https://web.archive.org/web/20220129090958/https:/www.sinc.co.uk/member-directory-list?page=", i)
-  
+
   SIC_item <- read_html(URL) %>%
     html_nodes("article")
+  
+  print(paste0("Taking a nap for a few seconds before interpreting page ", i))   #sleep for a few seconds (whether 5 or 10 is up to you) to ensure you don't overload the server or potentially get blocked from the IP address because it suspects a DDOS attack. Just about being a good neighbour to the server.
+  Sys.sleep(5)
+  print("Waking up to interpret that page")
   
   for (j in 1:length(SIC_item)){
     
@@ -125,6 +129,7 @@ for (i in 1:14){
   
   # bindrows 
   SIC <- bind_rows(SIC, SIC_vec)
+
 
   }
 }
