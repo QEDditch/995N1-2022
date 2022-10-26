@@ -34,7 +34,7 @@ library(tidyverse)
 # copy the directory in the code below 
 # then use the full file name to read the file....
 
-setwd("/Users/fl49/Desktop")           # Find the directory of your dataset
+#setwd("/Users/fl49/Desktop")           # Find the directory of your dataset
 isi_original_file <- "deep_learning_wos.txt"        # put in the name of the file you would like to read, don't forget to put the full extention name (e.g. '.txt')
 isi_file <- convert2df(isi_original_file, dbsource="wos", format="plaintext")    # Convert the directory of the dataset, use either the manual above or the help function (e.g. ?convert2df) to find the possible 
 
