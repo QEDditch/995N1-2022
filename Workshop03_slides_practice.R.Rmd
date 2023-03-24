@@ -31,7 +31,7 @@ library(tidyverse)
 library(GGally)
 library(gghighlight)
 library(patchwork)
-my_data <- read_csv("scoreboard_firms_pharma_healthcare.csv")
+my_data <- read_csv("scoreboard_firms_pharma_healthcare(2).csv")
 ```
 
 We start with examining the distribution of some variables in the dataset. In the case of `isocountrycode`, an histogram is more appropriate since this variable is categorical, while for all the remaining variables we can plot a density function.
